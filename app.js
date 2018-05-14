@@ -20,13 +20,12 @@ document.querySelector('.btn-roll').addEventListener('click', function(e){
 		let dice = Math.floor(Math.random()*(7-1)+1);
 		// 2. Display the results
 		let diceDOM = document.querySelector('.dice');
-		diceDOM.style.display = 'block';
 		diceDOM.src = 'dice-' + dice + '.png';
 
 		if(dice > 1) {
 			roundScore += dice
 			document.querySelector('#current-' + activePlayer).textContent = roundScore;
-			document.querySelector('.dice').style.display = 'none';
+			document.querySelector('.dice').style.display = 'block';
 		} else {
 			// Next player
 			nextPlayer();
